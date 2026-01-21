@@ -52,8 +52,9 @@ else:
     print("Failed")
 os.system(cmd2)
 
-cmd4='rpm -qa|sort '
-output_file = "/root/config_bkp/rpmlist_bkp.txt"
+# cmd4='rpm -qa|sort '
+cmd4='dpkg -l|sort'
+output_file = "/root/config_bkp/package_list_bkp.txt"
 
 # using os.system to run the command and redirect the output to a file
 execute = os.system(f"{cmd4} > {output_file}")
