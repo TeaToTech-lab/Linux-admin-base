@@ -52,3 +52,15 @@ else:
     print("Failed")
 os.system(cmd2)
 
+cmd4='rpm -qa|sort '
+output_file = "/root/config_bkp/rpmlist_bkp.txt"
+
+# using os.system to run the command and redirect the output to a file
+execute = os.system(f"{cmd4} > {output_file}")
+if execute == 0:
+    print("Successfully executed")
+else:
+    print("Failed")
+os.system(cmd4)
+
+
